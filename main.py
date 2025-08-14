@@ -1,17 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_mail import Mail, Message
-import os
-
+from flask import Flask, render_template
 
 app = Flask(__name__)
-
-# Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', 'chandrakantgadiluhar@gmail.com')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', 'b2296602')
-mail = Mail(app)
 
 @app.route('/')
 def home():
@@ -33,68 +22,13 @@ def team():
 def achievements():
     return render_template('achievements.html')
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact')
 def contact():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
-        message = request.form['message']
-        
-        # Send email
-        msg = Message(
-            subject=f"New Contact Form Submission from {name}",
-            sender=email,
-            recipients=['vidhyaprem017@gmail.com']
-        )
-        msg.body = f"""
-        Name: {name}
-        Email: {email}
-        Phone: {phone}
-        
-        Message:
-        {message}
-        """
-        mail.send(msg)
-        
-        return redirect(url_for('contact_success'))
     return render_template('contact.html')
 
-@app.route('/contact/success')
-def contact_success():
-    return render_template('contact.html', success=True)
-
-@app.route('/about-ai-chat', methods=['POST'])
-def about_ai_chat():
-    data = request.get_json()
-    user_message = data['message']
-    
-    try:
-        # Create a streaming response
-        def generate():
-            completion = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "system", "content": """You are VidhyaPrem's career counseling assistant. 
-                    Explain our services, team, and GROW methodology in under 50 words. 
-                    Be professional yet friendly. Never say "As an AI model"."""},
-                    {"role": "user", "content": user_message}
-                ],
-                temperature=0.7,
-                stream=True  # Enable streaming
-            )
-            
-            full_response = ""
-            for chunk in completion:
-                if chunk.choices[0].delta.get('content'):
-                    text_chunk = chunk.choices[0].delta['content']
-                    full_response += text_chunk
-                    yield f"data: {json.dumps({'chunk': text_chunk})}\n\n"
-            
-        return Response(generate(), mimetype='text/event-stream')
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+# Vercel entry point
+def handler(event, context):
+    return app(event, context)
 
 if __name__ == '__main__':
     app.run(debug=True)
