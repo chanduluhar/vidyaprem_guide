@@ -8,7 +8,7 @@
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold">EDUCATION IS THE GREATEST TREASURE</h1>
                 <p class="lead">Unlock your potential with us</p>
-                <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg mt-3">Get Started</a>
+                <a href="https://qatnge.on-app.in/app/home?orgCode=qatnge&referrer=utm_source=copy-link&utm_medium=tutor-app-referral" class="btn btn-light btn-lg mt-3">Get Started</a>
             </div>
             <div class="col-lg-6">
                 <img src="{{ url_for('static', filename='images/image_1.png') }}" alt="Education" class="img-fluid">
@@ -71,60 +71,6 @@
     <div class="container">
         <h2 class="text-center mb-5">Our Products & Services</h2>
         <div class="row">
-            <!-- Animated Image Container -->
-            <div class="col-md-6 mx-auto mb-5 text-center">
-                <div style="
-                    width: 300px;
-                    height: 300px;
-                    margin: 0 auto;
-                    position: relative;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                ">
-                    <img src="{{ url_for('static', filename='images/career-ride.png') }}" 
-                         alt="Carer Ride" 
-                         style="
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            animation: imageCycle 16s infinite;
-                         ">
-                    <img src="{{ url_for('static', filename='images/eco-write.png') }}" 
-                         alt="Eco-wriite" 
-                         style="
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            animation: imageCycle 16s infinite;
-                            animation-delay: -12s;
-                         ">
-                    <img src="{{ url_for('static', filename='images/insurance.png') }}" 
-                         alt="Insurance" 
-                         style="
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            animation: imageCycle 16s infinite;
-                            animation-delay: -8s;
-                         ">
-                    <img src="{{ url_for('static', filename='images/career-guidance.png') }}" 
-                         alt="Career Guidance" 
-                         style="
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            animation: imageCycle 16s infinite;
-                            animation-delay: -4s;
-                         ">
-                </div>
-            </div>
-            
-            <!-- Static Product Icons -->
             <div class="col-md-3 col-6 mb-4 text-center">
                 <img src="{{ url_for('static', filename='images/career-ride.png') }}" alt="Carer Ride" class="img-fluid mb-3" style="max-width: 100px;">
                 <h5>Carer Ride</h5>
@@ -137,10 +83,18 @@
                 <img src="{{ url_for('static', filename='images/insurance.png') }}" alt="Insurance" class="img-fluid mb-3" style="max-width: 100px;">
                 <h5>Insurance</h5>
             </div>
-            <div class="col-md-3 col-6 mb-4 text-center">
+          <!--  <div class="col-md-3 col-6 mb-4 text-center">
                 <img src="{{ url_for('static', filename='images/career-guidance.png') }}" alt="Career Guidance" class="img-fluid mb-3" style="max-width: 100px;">
                 <h5>Career Guidance</h5>
             </div>
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="{{ url_for('static', filename='images/pencil.png') }}" alt="Paper waste Pencil" class="img-fluid mb-3" style="max-width: 100px;">
+                <h5>Paper waste Pencil</h5>
+            </div>
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="{{ url_for('static', filename='images/student-insurance.png') }}" alt="Student Insurance" class="img-fluid mb-3" style="max-width: 100px;">
+                <h5>Student Insurance</h5>
+            </div> -->
         </div>
     </div>
 </section>
@@ -193,24 +147,4 @@
         </div>
     </div>
 </section>
-
-<style>
-@keyframes imageCycle {
-    0% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0;
-    }
-    95% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-</style>
 {% endblock %}
