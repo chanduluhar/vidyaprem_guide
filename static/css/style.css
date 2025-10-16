@@ -12,26 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
 }
-
+/* Hero Section */
 .hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: bgChange 24s infinite;
-}
-
-@keyframes bgChange {
-    0%   { background-image: url('{{ url_for("static", filename="images/insurance.png") }}'); }
-    25%  { background-image: url('{{ url_for("static", filename="images/slider2.jpg") }}'); }
-    50%  { background-image: url('{{ url_for("static", filename="images/slider3.jpg") }}'); }
-    75%  { background-image: url('{{ url_for("static", filename="images/slider4.jpg") }}'); }
-    100% { background-image: url('{{ url_for("static", filename="images/slider1.jpg") }}'); }
-}
-
+    padding: 5rem 0;
+}	
 
 /* Card Styles */
 .card {
