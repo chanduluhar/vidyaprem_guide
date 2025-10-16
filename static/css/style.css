@@ -13,11 +13,6 @@ a {
     text-decoration: none;
 }
 
-/* Hero Section */
-.hero-section {
-    padding: 5rem 0;
-}
-
 /* Hero Section (Background Image Slider) */
 .hero-section {
     position: relative;
