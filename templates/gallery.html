@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Gallery Header -->
+<section class="text-center py-5 bg-light">
+    <h1 class="fw-bold">Gallery</h1>
+    <p>Explore our moments – Photos & Videos</p>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Image Gallery</h2>
+        <div class="row g-3">
+
+            <!-- Image 1 -->
+            <div class="col-md-3 col-6">
+                <img src="{{ url_for('static', filename='gallery/img1.jpg') }}" class="img-fluid rounded shadow" alt="Gallery Image">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-3 col-6">
+                <img src="{{ url_for('static', filename='gallery/img2.jpg') }}" class="img-fluid rounded shadow" alt="Gallery Image">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-3 col-6">
+                <img src="{{ url_for('static', filename='gallery/img3.jpg') }}" class="img-fluid rounded shadow" alt="Gallery Image">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-3 col-6">
+                <img src="{{ url_for('static', filename='gallery/img4.jpg') }}" class="img-fluid rounded shadow" alt="Gallery Image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Video Gallery Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Video Gallery</h2>
+        <div class="row g-4">
+
+            <!-- Video 1 -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <video controls>
+                        <source src="{{ url_for('static', filename='gallery/video1.mp4') }}" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                    <video controls>
+                        <source src="{{ url_for('static', filename='gallery/video2.mp4') }}" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    img {
+        transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+{% endblock %}
