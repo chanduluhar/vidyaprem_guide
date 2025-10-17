@@ -22,9 +22,14 @@ def team():
 def achievements():
     return render_template('achievements.html')
 
+@app.route("/gallery")
+def gallery():
+    return render_template("gallery.html")
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
 
 
 
