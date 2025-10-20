@@ -36,5 +36,6 @@ def contact():
 @app.route('/videos/<path:filename>')
 def serve_videos(filename):
     # Serves videos from static/videos directory with correct MIME type
-    return send_from_directory('static/videos', filename, mimetype='video/mp4')
+    return send_from_directory('static/images', filename, mimetype='video/mp4')
+
 
