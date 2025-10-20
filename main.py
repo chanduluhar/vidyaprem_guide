@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
+# --- Page Routes ---
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -22,14 +23,18 @@ def team():
 def achievements():
     return render_template('achievements.html')
 
-@app.route("/gallery")
+@app.route('/gallery')
 def gallery():
-    return render_template("gallery.html")
+    return render_template('gallery.html')
 
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
 
 
-
+# --- Video Serving Route (Fix for local video playback) ---
+@app.route('/videos/<path:filename>')
+def serve_videos(filename):
+    # Serves videos from static/videos directory with correct MIME type
+    return send_from_directory('static/videos', filename, mimetype='video/mp4')
 
