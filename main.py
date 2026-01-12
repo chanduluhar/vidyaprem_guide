@@ -32,10 +32,3 @@ def contact():
     return render_template('contact.html')
 
 
-
-
-
-
-
-
-
