@@ -32,11 +32,7 @@ def contact():
     return render_template('contact.html')
 
 
-# --- Video Serving Route (Fix for local video playback) ---
-@app.route('/videos/<path:filename>')
-def serve_videos(filename):
-    # Serves videos from static/videos directory with correct MIME type
-    return send_from_directory('static/images', filename, mimetype='video/mp4')
+
 
 
 
