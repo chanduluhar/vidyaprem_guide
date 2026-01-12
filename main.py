@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 # --- Page Routes ---
 @app.route('/')
@@ -27,16 +27,9 @@ def achievements():
 def gallery():
     return render_template('gallery.html')
 
-@app.route("/scholarship")
-def scholarship():
-    return render_template("scholarship.html")
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
-
-
-
 
 
 
