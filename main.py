@@ -1,31 +1,57 @@
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
-@app.route("/about")
+@app.route('/about')
 def about():
-    return render_template("about.html")
+    return render_template('about.html')
 
-@app.route("/services")
+@app.route('/services')
 def services():
-    return render_template("services.html")
+    return render_template('services.html')
 
-@app.route("/team")
+@app.route('/team')
 def team():
-    return render_template("team.html")
+    return render_template('team.html')
 
-@app.route("/achievements")
+@app.route('/achievements')
 def achievements():
-    return render_template("achievements.html")
+    return render_template('achievements.html')
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/team')
+def team():
+    return render_template('team.html')
+
+@app.route('/achievements')
+def achievements():
+    return render_template('achievements.html')
 
 @app.route("/scholarship")
 def scholarship():
     return render_template("scholarship.html")
 
-@app.route("/contact")
+@app.route('/contact')
 def contact():
-    return render_template("contact.html")
+    return render_template('contact.html')
+
+
