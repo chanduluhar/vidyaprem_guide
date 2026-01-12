@@ -17,7 +17,7 @@ def services():
     
 @app.route('/scholarship')
 def services():
-    return render_template('scholership.html')
+    return render_template('scholarship.html')
 
 
 @app.route('/team')
@@ -42,6 +42,7 @@ def contact():
 def serve_videos(filename):
     # Serves videos from static/videos directory with correct MIME type
     return send_from_directory('static/images', filename, mimetype='video/mp4')
+
 
 
 
