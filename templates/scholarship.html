@@ -111,6 +111,17 @@
             background-color: #f0f9ff;
             color: var(--primary-color);
         }
+
+        .zone-card {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.zone-card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
         
         @media (max-width: 768px) {
             .hero-section {
@@ -148,7 +159,7 @@
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <span class="badge-custom mb-2">For 5th to 12th</span>
-                                    <h3 class="h4 fw-bold mb-2">Vidhya Setu Scholarship 2026</h3>
+                                    <h3 class="h4 fw-bold mb-2">Vidhya Setu Scholarship</h3>
                                 </div>
                                 <div class="text-primary fs-1">
                                     <i class="fas fa-bridge"></i>
@@ -490,6 +501,82 @@
                         <li><strong>Management Rights:</strong> Management reserves the right to modify, cancel, or reschedule the process anytime.</li>
                     </ol>
                 </div>
+                <!-- Zone-Wise Areas Section -->
+<div class="card mb-4 border-0 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+        <h5 class="mb-0">🌍 Zone-Wise Areas</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 1</strong></h6>
+                    <p class="mb-1">Dindoli, Godadara, Navagam, Limbayat, Parvat Patiya</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 2</strong></h6>
+                    <p class="mb-1">Udhna, Sachin, Bhestan, Pandesara, Althan, Vesu</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 3</strong></h6>
+                    <p class="mb-1">Varacha, Vedroad, Katargam, Kapodra</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 4</strong></h6>
+                    <p class="mb-1">Athvaline, Adajan, Pal, Rander, Olpad</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 5</strong></h6>
+                    <p class="mb-1">Kadodara, Chalthan, Kamrej, Palsana, Bardoli</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 6</strong></h6>
+                    <p class="mb-1">Navsari, Valsad, Dang, Tapi</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 7</strong></h6>
+                    <p class="mb-1">Bharuch, Ankleshwar, Kim, Kosamba</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 8</strong></h6>
+                    <p class="mb-1">Vadodara, Ahmedabad, Gandhinagar, Anand, Kheda, Chhota Udaipur</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 9</strong></h6>
+                    <p class="mb-1">Rajkot, Junagadh, Porbandar, Morbi, Mehsana, Amreli, Surendranagar</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 10</strong></h6>
+                    <p class="mb-1">Maharashtra (Nandurbar, Dhule, Jalgaon)</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="zone-card p-3 border rounded">
+                    <h6><strong>Zone 11</strong></h6>
+                    <p class="mb-1">Madhya Pradesh (Pansemal, Khetiya, Badwani, Indore)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <a href="https://forms.gle/e7mihmt6Nj8HxtLR7" target="_blank" class="btn btn-primary">Apply Now</a>
@@ -595,5 +682,6 @@
 </body>
 </html>
 {% endblock %}
+
 
 
